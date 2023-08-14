@@ -1,3 +1,7 @@
-composer.phar
-/vendor/
-/nbproject/
+.idea
+composer.lock
+vendor
+nbproject
+.phpunit.result.cache
+.php_cs.cache
+*.sh

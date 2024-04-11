@@ -1,6 +1,6 @@
 <?php
 
-namespace CachingHttpClient;
+namespace Balpom\CachingHttpClient;
 
 use Psr\Http\Client\ClientInterface;
 use Psr\SimpleCache\CacheInterface;

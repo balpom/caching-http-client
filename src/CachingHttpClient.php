@@ -4,7 +4,7 @@ namespace Balpom\CachingHttpClient;
 
 use Psr\Http\Client\ClientInterface;
 use Psr\SimpleCache\CacheInterface;
-use Balpom\HttpCacheTtl\TtlContainer;
+use Balpom\HttpCacheTtl\HttpCacheTtlInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -12,12 +12,12 @@ class CachingHttpClient implements ClientInterface
 {
     private ClientInterface $client;
     private CacheInterface $cache;
-    private TtlContainer $times;
+    private HttpCacheTtlInterface $times;
 
     public function __construct(
             ClientInterface $client,
             CacheInterface $cache,
-            TtlContainer $times
+            HttpCacheTtlInterface $times
     )
     {
         $this->client = $client;
